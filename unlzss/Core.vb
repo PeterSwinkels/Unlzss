@@ -43,7 +43,7 @@ Public Module CoreModule
       End Try
    End Sub
 
-   'This procedure decompresses the specified LZSS compressed data and returns whether or not the decompression succeeded.
+   'This procedure decompresses the specified LZSS compressed data and returns the decompressed data if successful.
    Private Function DecompressLZSS(CompressedData As List(Of Byte), DecompressedSize As Integer) As List(Of Byte)
       Try
          Dim Buffer(&H0 To (RING_SIZE + MAXIMUM_LENGTH) - &H2%) As Byte
